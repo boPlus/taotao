@@ -19,15 +19,15 @@
         <dependency>
             <groupId>com.taotao</groupId>
             <artifactId>taotao-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
     <modules>
         <module>taotao-manager-pojo</module>
-        <module>../taotao-manager-mapper</module>
         <module>taotao-manager-mapper</module>
         <module>taotao-manager-service</module>
+        <module>taotao-manager-web</module>
     </modules>
 
     <build>
