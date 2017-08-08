@@ -6,6 +6,7 @@ import com.taotao.pojo.TbItemParamItem;
 import com.taotao.pojo.TbItemParamItemExample;
 import com.taotao.service.ItemParamItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
@@ -13,6 +14,7 @@ import java.util.Map;
 /**
  * Created by Administrator on 2017/8/2 0002.
  */
+@Service
 public class ItemParamItemServiceImpl implements ItemParamItemService {
 
     @Autowired
