@@ -23,41 +23,65 @@ public class JedisClientSingle implements JedisClient {
 
     @Override
     public String set(String key, String value) {
-        return null;
+        Jedis jedis = jedisPool.getResource();
+        String string = jedis.set(key, value);
+        jedis.close();
+        return string;
     }
 
     @Override
     public String hget(String hkey, String key) {
-        return null;
+        Jedis jedis = jedisPool.getResource();
+        String string = jedis.hget(hkey, key);
+        jedis.close();
+        return string;
     }
 
     @Override
     public long hset(String hkey, String key, String value) {
-        return 0;
+        Jedis jedis = jedisPool.getResource();
+        Long result = jedis.hset(hkey, key, value);
+        jedis.close();
+        return result;
     }
 
     @Override
     public long incr(String key) {
-        return 0;
+        Jedis jedis = jedisPool.getResource();
+        Long result = jedis.incr(key);
+        jedis.close();
+        return result;
     }
 
     @Override
     public long expire(String key, int second) {
-        return 0;
+        Jedis jedis = jedisPool.getResource();
+        Long result = jedis.expire(key, second);
+        jedis.close();
+        return result;
     }
 
     @Override
     public long ttl(String key) {
-        return 0;
+        Jedis jedis = jedisPool.getResource();
+        Long result = jedis.ttl(key);
+        jedis.close();
+        return result;
     }
 
     @Override
     public long del(String key) {
-        return 0;
+        Jedis jedis = jedisPool.getResource();
+        Long result = jedis.del(key);
+        jedis.close();
+        return result;
     }
 
     @Override
     public long hdel(String hkey, String key) {
-        return 0;
+        Jedis jedis = jedisPool.getResource();
+        Long result = jedis.hdel(hkey, key);
+        jedis.close();
+        return result;
     }
 }
